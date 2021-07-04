@@ -16,7 +16,9 @@ class Project {
 		this.status = 'open';
 	}
 	get endDate() {
-		return new Date(this.startDate.getTime() + 10 * 24 * 3600 * 1000);
+		return new Date(
+			this.startDate.getTime() + this.duration * 24 * 3600 * 1000
+		);
 	}
 
 	get daysLeft() {
@@ -66,7 +68,7 @@ let projects = [
 		currentCollected: 0,
 		currentNumberOfDoners: 0,
 		startDate: new Date(2021, 6 - 1, 27),
-		duration: 10,
+		duration: 15,
 	}),
 ];
 
